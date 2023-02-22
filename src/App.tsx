@@ -9,7 +9,7 @@ type FormInput ={
 
 export default function App() {
 
-  const { register, handleSubmit, formState: { errors } } = useForm<FormInput>();
+  const { register, handleSubmit, formState: { errors } } = useForm<FormInput>({ defaultValues: { name: "山田太郎", age: 25 } });
   const onSubmit: SubmitHandler<FormInput> = (data) => console.log(data);
 
   return (
